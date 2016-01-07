@@ -5,11 +5,11 @@ RUN apt-get update && apt-get install -y unzip ca-certificates && apt-get clean 
 
 ADD consul_0.6.1_linux_amd64.zip /consul.zip
 ADD consul_0.6.1_web_ui.zip /consul-ui.zip
-ADD entrypoint.sh /
 RUN mkdir consul
-ADD consul-conf.json /consul/consul-config.json
 WORKDIR /consul
 RUN unzip /consul.zip && unzip /consul-ui.zip
+ADD entrypoint.sh /
+ADD consul-conf.json /consul/consul-config.json
 EXPOSE 8500 8400 8300 8600 8301 8302
 VOLUME ["/data"]
 
