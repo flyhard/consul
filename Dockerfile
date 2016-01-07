@@ -4,8 +4,8 @@ MAINTAINER Per Abich <per.abich@gmail.com>
 RUN apt-get update && apt-get install -y unzip ca-certificates
 
 RUN apt-get clean
-ADD consul_0.5.2_linux_amd64.zip /consul.zip
-ADD consul_0.5.2_web_ui.zip /consul-ui.zip
+ADD consul_0.6.1_linux_amd64.zip /consul.zip
+ADD consul_0.6.1_web_ui.zip /consul-ui.zip
 RUN mkdir consul
 ADD consul-conf.json /consul/consul-config.json
 WORKDIR /consul
