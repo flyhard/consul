@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Per Abich <per.abich@gmail.com>
 
-RUN apt-get update && apt-get install -y unzip ca-certificates && apt-get clean
+RUN apt-get update && apt-get install -y unzip ca-certificates && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD consul_0.6.1_linux_amd64.zip /consul.zip
 ADD consul_0.6.1_web_ui.zip /consul-ui.zip
