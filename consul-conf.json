@@ -2,6 +2,5 @@
   "datacenter": "dc1",
   "data_dir": "/data",
   "log_level": "INFO",
-  "node_name": "consul",
   "server": true
 }
