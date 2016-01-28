@@ -1,0 +1,8 @@
+token.sh
+consulToken.txt
+.git/
+*.bak
+Makefile
+build.sh
+README.md
+# Created by .ignore support plugin (hsz.mobi)

@@ -7,7 +7,7 @@ ADD consul_0.6.3_linux_amd64.zip /consul.zip
 ADD consul_0.6.3_web_ui.zip /consul-ui.zip
 RUN mkdir consul
 WORKDIR /consul
-RUN unzip /consul.zip && unzip /consul-ui.zip
+RUN unzip /consul.zip && unzip /consul-ui.zip -d dist
 ADD entrypoint.sh /
 ADD consul-conf.json /consul/consul-config.json
 EXPOSE 8500 8400 8300 8600 8301 8302
