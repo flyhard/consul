@@ -10,7 +10,7 @@ WORKDIR /consul
 RUN unzip /consul.zip && unzip /consul-ui.zip -d dist
 ADD entrypoint.sh /
 ADD consul-conf.json /consul/consul-config.json
-EXPOSE 8500 8400 8300 8600 8301 8302
+EXPOSE 8500 8400 8300 8600 8301 8302 8301/udp 8302/udp 8600/udp
 VOLUME ["/data"]
 
 ENTRYPOINT ["/entrypoint.sh"]
