@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/consul/consul agent -server -config-file consul-config.json -ui-dir=/consul/dist -client=0.0.0.0 $@
+/usr/bin/consul agent -server -config-dir=/etc/consul -client=0.0.0.0 $@
